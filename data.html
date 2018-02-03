@@ -1,0 +1,47 @@
+---
+layout: default
+title: Data
+permalink: /data/
+---
+
+<!-- DATA -->
+<div class="container main">
+  <div class="row">
+    <p id="datacount"></p>
+    <!-- DIV PER CHART -->
+    <div id="chart-row-type">
+      <h4>Type of slavery</h4>
+    </div>
+    <div id="chart-row-intervention">
+      <h4>Type of intervention</h4>
+    </div>
+    <div id="chart-row-geographical">
+      <h4>Geographical area</h4>
+    </div>
+    <div id="chart-row-sector">
+      <h4>Sector</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <table id="table-datasummary" class="table data-table "></table>
+
+    <div class="pagination">
+      <p>Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.
+        <input id="next" class="btn btn-default" type="button" value="Next" onclick="javascript:next()"/>
+        <input id="previous" class="btn btn-default" type="Button" value="Previous" onclick="javascript:previous()" />
+      </p>
+      </div>
+  </div>
+
+</div>
+
+
+<!--NB D3 ver3, not ver4; crossfilter load before dc.js  -->
+<script type="text/javascript" src="{{ "/vendor/d3.min.js" | prepend: site.baseurl }}"></script>    
+<script type="text/javascript" src="{{ "/vendor/crossfilter.min.js" | prepend: site.baseurl }}"></script>  
+<script type="text/javascript" src="{{ "/vendor/dc.min.js" | prepend: site.baseurl }}"></script>     
+
+<script type="text/javascript" src="{{ "/vendor/jquery-3.2.1.min.js" | prepend: site.baseurl }}"></script>     
+
+<script type="text/javascript" src="{{ "/iascresearch.js" | prepend: site.baseurl }}"></script>     
