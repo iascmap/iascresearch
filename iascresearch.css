@@ -11,12 +11,17 @@ body 		{margin: 0; /* font-family: Helvetica, Arial, sans-serif; */}
 
 form		{display: inline; margin-right: 2em;}
 
-/* MAIN */
-.main 		{margin-top: 20px;}
-/* as no select bar yet: increase margin */
-.main 		{margin-top: 40px;}
-#title 		{margin-top: 0px;}
+.helpbutton {text-align: right;}
 
+/* MAIN */
+.main 			{margin-top: 20px;}
+#title 			{margin-top: 0px;}
+h3 				{margin-top: 30px;}	
+.modal-footer	{text-align: center;}
+.modal-dialog 	{margin-top: 130px;}
+
+#cycle,
+#cycle img 		{max-width: 400px;}
 
 /* DATA */
 #datacount 						{background: #efefef; line-height: 28px; padding: 6px 8px}

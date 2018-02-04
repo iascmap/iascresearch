@@ -80,7 +80,7 @@ d3.csv('/data.csv', function (data) {
 	    .group(all)
 	    .html({
 	    	some: '<span class="filter-count">%filter-count</span> out of <span class="total-count">%total-count</span> outputs selected. <a href="javascript:viewAll();" class="btn btn-primary btn-sm">View all outputs</a>',
-     		all: 'All <span class="total-count">%total-count</span> outputs displayed. <b>Click on charts to filter...</b> '
+     		all: 'All <span class="total-count">%total-count</span> outputs displayed. <b>Click a bar to filter the data...</b> '
 		});
 
 
