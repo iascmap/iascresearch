@@ -13,7 +13,7 @@ permalink: /home/
 
         <p>Explain scope of research (timeframe; type of research)... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet pellentesque sem, vel blandit ipsum euismod id. Cras fermentum massa in erat venenatis posuere. Morbi porttitor eros a euismod sollicitudin. </p>
 
-        <a class="btn btn-primary" href="/data/"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> View the data</a>
+        <a class="btn btn-primary" href="{{ "/data/" | prepend: site.baseurl }}"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> View the data</a>
         <a class="btn btn-default" href="/xxxx.pdf">Download the report (pdf)</a>
 
       </div>
@@ -22,9 +22,9 @@ permalink: /home/
         <p><b>Filter the data by clicking on the charts as demonstrated below</b></p>
 
         <div id="cycle">
-          <img src="/graph0.png" class="img-responsive" alt="example graph"/>
-          <img src="/graph1.png" class="img-responsive" alt="example graph - click"/>
-          <img src="/graph2.png" class="img-responsive" alt="example graph - result"/>
+          <img src="{{ "/graph0.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph"/>
+          <img src="{{ "/graph1.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click"/>
+          <img src="{{ "/graph2.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
         </div>
 
       </div>

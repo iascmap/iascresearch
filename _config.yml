@@ -1,7 +1,7 @@
 # Site settings
-#baseurl: "/iascresearch" # the subpath of your site, e.g. /blog
-url: "http://iascresearch.nottingham.ac.uk" # the base hostname & protocol for your site
-
+baseurl: "/iascresearch" # the subpath of your site, e.g. /blog
+#url: "http://iascresearch.nottingham.ac.uk" # the base hostname & protocol for your site
+url: "http://iascmap.nottingham.ac.uk"
 
 # Build settings
 markdown: kramdown
