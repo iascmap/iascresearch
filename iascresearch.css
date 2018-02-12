@@ -1,14 +1,15 @@
 body 		{margin: 0; /* font-family: Helvetica, Arial, sans-serif; */}
 /* HEADER */
 .topbar		{min-height: 40px; background-color: #002d73; padding-bottom: 10px;}
-.header 	{padding-left:130px; position: relative;}
+.header 	{position: relative;}
 #logo 		{position: absolute; top:2px; left:0;}
-.header h1 	{margin-top: 10px;}
-.header img {max-height: 125px;}
+.header h1 	{padding-top: 85px; margin-top: 10px; font-size: 24px;}
+.header img {max-height: 75px;}
 .uonlogo 	{height: 75px; margin-left: 10px;}
 .header p 	{font-size: 120%;}
 .title  	{border-bottom: 5px solid #0099cc; margin-bottom: 5px; }
-#selectbar select {margin-top: 10px; width: 100%; }
+#selectbar	{text-align: right;}
+#selectbar a {padding: 0 10px; font-weight: bold;}
 
 form		{display: inline; margin-right: 2em;}
 
@@ -54,3 +55,31 @@ table>tbody+tbody { border-top: 0px !important; }
 
 .pagination 			{display: block; border-top: 4px solid #ddd; margin-top: 0px; padding: 8px}
 .pagination input {float: right; margin-left: 1em}
+
+
+
+
+/* Tablets / 'Small' -- 1 col: small map*/
+@media (min-width: 768px) {
+	.header 		{padding-left:130px; }
+	.header img 	{max-height: 100px;} /* was 125 */
+	.uonlogo 		{height: 75px;}
+	.header h1 		{padding-top: 0; font-size: 30px;}
+	#selectbar select {width: auto; margin-left: 0; margin-right: 2em}
+	h2 				{font-size: 30px;}
+
+	/* MAP */
+	.svg-container 	{width: 30%; margin-left: 35%; padding-bottom: 49.5%}
+}
+
+/* Desktop / "Medium' -- 2 col: map fill col width*/
+@media (min-width: 992px) {
+	.topbar			{min-height: 40px;}
+	.header img 	{max-height: 125px;} 
+	.header h1 		{font-size: 36px;}
+	#selectbar 		{padding-left: 130px}
+
+	th 				{white-space: nowrap;}
+	/* MAP */
+	.svg-container 	{width: 100%; margin-left: 0; padding-bottom: 165%}
+}
