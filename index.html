@@ -60,12 +60,16 @@ layout: default
 
         <p>Explain scope of research (timeframe; type of research)... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet pellentesque sem, vel blandit ipsum euismod id. Cras fermentum massa in erat venenatis posuere. Morbi porttitor eros a euismod sollicitudin. </p>
 
-        <p><b>Filter the data by clicking on the charts as demonstrated below</b></p>
+        <p><b>Filter the data by clicking on the charts</b></p>
+        <p>For example clicking "Forced Labour" will filter both the charts and the datatable to only show outputs related to Forced Labour. You can filter further or reset to return to viewing all the outputs.</p>     
 
         <div id="cycle">
-          <img src="{{ "/graph0.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph"/>
-          <img src="{{ "/graph1.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click"/>
-          <img src="{{ "/graph2.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
+          <img src="{{ "/help1.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph"/>
+          <img src="{{ "/help2.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click to filter"/>
+          <img src="{{ "/help3.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
+          <img src="{{ "/help4.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click to filter"/>
+          <img src="{{ "/help5.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
+          <img src="{{ "/help6.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - reset"/>
         </div>
 
       </div>
@@ -97,7 +101,8 @@ $('#myModal').modal('show');
 $(document).ready(function(){
   $('#cycle').slick({
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    dots: true
   });
 });
 </script>
