@@ -23,7 +23,7 @@ var ndx,
     dataSummaryTable = dc.dataTable("#table-datasummary");
 
 // LOAD DATA
-d3.csv('/iascresearch/data.csv', function (data) {
+d3.csv('data.csv', function (data) {
 	// might want to format data a bit here
 	// eg calculate month/year from timestamp
     data.forEach(function (d) {
