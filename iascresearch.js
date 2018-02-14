@@ -160,7 +160,8 @@ d3.csv('/iascresearch/data.csv', function (data) {
             return d.year;
         })
   		.showGroups(false)			// dont show extra group rows eg '2016' above all 2016 entries
-    	.columns(['output', 'year', 'type', 'intervention', 'geographical', 'sector']);
+    	//.columns(['output', 'year', 'type', 'intervention', 'geographical', 'sector']);
+    	.columns(['output', 'year', 'type', 'intervention', 'geographical', { label: "Topic", format: function (d) { return d.sector; } } ]);
     	// can change labels & format of data if desired
 
 
