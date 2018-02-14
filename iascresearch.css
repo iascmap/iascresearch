@@ -18,12 +18,15 @@ form		{display: inline; margin-right: 2em;}
 /* MAIN */
 .main 			{margin-top: 40px;}
 #title 			{margin-top: 0px;}
-h3 				{margin-top: 30px;}	
+h1				{margin-top: 0px;}	
+h3 				{margin-top: 40px;}	
+.btn-info		{margin-left: 20px}
 .modal-footer	{text-align: center;}
 .modal-dialog 	{margin-top: 130px;}
 
+
 #cycle,
-#cycle img 		{max-width: 400px;}
+#cycle img 		{width: 400px;}
 
 /* DATA */
 #datacount 						{background: #efefef; line-height: 28px; padding: 6px 8px}

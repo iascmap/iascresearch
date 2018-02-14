@@ -2,36 +2,102 @@
 layout: default
 ---
 
-<!-- MAIN -->
-<div class="container main"> 
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        
-        <h1>About the project</h1>
+<div class="container">
+  <div class="row helpbutton">
+    <!-- Button trigger modal 
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+      Help and Background
+    </button> -->
+  </div>
+</div>
 
-        <p>This website, and the accompanying research report, are part of a collaborative project between the Office of the Independent Anti-Slavery Commissioner (IASC) and the University of Nottingham. </p>
+<!-- DATA -->
+<div class="container main">
+  <div class="row">
+    <p id="datacount"></p>
+    <!-- DIV PER CHART -->
+    <div id="chart-row-type">
+      <h4>Type of slavery</h4>
+    </div>
+    <div id="chart-row-intervention">
+      <h4>Type of intervention</h4>
+    </div>
+    <div id="chart-row-geographical">
+      <h4>Geographical area</h4>
+    </div>
+    <div id="chart-row-sector">
+      <h4>Sector</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <table id="table-datasummary" class="table data-table "></table>
+
+    <div class="pagination">
+      <p>Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.
+        <input id="next" class="btn btn-default" type="button" value="Next" onclick="javascript:next()"/>
+        <input id="previous" class="btn btn-default" type="Button" value="Previous" onclick="javascript:previous()" />
+      </p>
+      </div>
+  </div>
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">About the data</h3>
+      </div>
+      <div class="modal-body">
+
 
         <p>The aim of the work was to map the current evidence base on contemporary slavery, including human trafficking, especially as it has an impact on the United Kingdom.</p>
 
-        <a class="btn btn-info" href="/iascresearch/data/">View the data</a>
-        <a class="btn btn-primary" href="/xxxx.pdf">Download report (pdf)</a>
+        <p>Explain scope of research (timeframe; type of research)... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet pellentesque sem, vel blandit ipsum euismod id. Cras fermentum massa in erat venenatis posuere. Morbi porttitor eros a euismod sollicitudin. </p>
 
+        <p><b>Filter the data by clicking on the charts as demonstrated below</b></p>
 
-        <h2>Independent Anti-Slavery Commissioner</h2>
-
-        <p>Kevin Hyland OBE is the United Kingdom’s first Independent Anti-Slavery Commissioner, leading efforts to tackle modern slavery and human trafficking. He promotes best practice and drives crucial improvement across the anti-slavery response, both in the UK and internationally.</p>
-
-        <a class="btn btn-default" href="http://www.antislaverycommissioner.co.uk/">Find out more</a>
-
-
-        <h2>University of Nottingham Rights Lab</h2>
-
-        <p>Home to the world's leading contemporary slavery experts and have built the world's first large-scale research platform for ending slavery. The Sustainable Development Goals call for an end to slavery by 2030. With governments and NGOs, we are designing new research-led antislavery interventions to help achieve this. Our 14 projects, demonstrate the Freedom Dividend: a safer, greener, more prosperous and equal world for everyone when slavery is brought to an end.</p>
-
-        <p>Contact us: <a href="mailto:RightsLab@nottingham.ac.uk">RightsLab@nottingham.ac.uk</a></p>
-
-        <a class="btn btn-default" href="https://www.nottingham.ac.uk/world/beacons/rights-lab/">Find out more</a>
+        <div id="cycle">
+          <img src="{{ "/graph0.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph"/>
+          <img src="{{ "/graph1.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click"/>
+          <img src="{{ "/graph2.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
+        </div>
 
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">View the data</button>
+      </div>
     </div>
+  </div>
 </div>
+
+
+
+<!--NB D3 ver3, not ver4; crossfilter load before dc.js  -->
+<script type="text/javascript" src="{{ "/vendor/d3.min.js" | prepend: site.baseurl }}"></script>    
+<script type="text/javascript" src="{{ "/vendor/crossfilter.min.js" | prepend: site.baseurl }}"></script> 
+<script type="text/javascript" src="{{ "/vendor/dc.min.js" | prepend: site.baseurl }}"></script>     
+
+<script type="text/javascript" src="{{ "/vendor/jquery-3.2.1.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/vendor/bootstrap.3.3.7.min.js" | prepend: site.baseurl }}"></script>     
+
+<script type="text/javascript" src="{{ "/iascresearch.js" | prepend: site.baseurl }}"></script>     
+
+<!-- slick image slider http://kenwheeler.github.io/slick/ -->
+<script type="text/javascript" src="{{ "/vendor/slick.min.js" | prepend: site.baseurl }}"></script> 
+
+<script>
+$('#myModal').modal('show');
+
+$(document).ready(function(){
+  $('#cycle').slick({
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+});
+</script>

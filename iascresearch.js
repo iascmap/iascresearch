@@ -27,7 +27,7 @@ d3.csv('/iascresearch/data.csv', function (data) {
 	// might want to format data a bit here
 	// eg calculate month/year from timestamp
     data.forEach(function (d) {
-    	d.output = '[' + d.id + '] ' + d.outputtitle; // + ' (' + d.year + ')';
+    	d.output =  d.outputtitle; // + ' (' + d.year + ')';  '[' + d.id + '] ' +
 			if (d.URL) {
 				// console.log (d.id + ': ' + d.URL);
 				d.output = d.output + ' <a href="' + d.URL + '">' + d.URL + '</a>';

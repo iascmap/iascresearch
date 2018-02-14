@@ -9,17 +9,31 @@ permalink: /help/
   	<div class="row">
   		<div class="col-md-8 col-md-offset-2">
   			
-  			<h2>How to explore the data</h2>
+  			<h1>Help</h1>
 
+        <p>Explain scope of dataset (timeframe; type of research)... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet pellentesque sem, vel blandit ipsum euismod id.</p>
+
+        <h3>Explore the data</h3>
         <p>Filter the data by clicking on the charts.</p>
-        <p>eg click "Forced Labour" to filter both the charts and the datatable to only show outputs related to Forced Labour.</p>
+        <p>For example clicking "Forced Labour" will filter both the charts and the datatable to only show outputs related to Forced Labour. You can filter further or reset to return to viewing all the outputs.</p>
+
+
 
         <div id="cycle">
+          <img src="{{ "/help1.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph"/>
+          <img src="{{ "/help2.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click to filter"/>
+          <img src="{{ "/help3.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
+          <img src="{{ "/help4.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click to filter"/>
+          <img src="{{ "/help5.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
+          <img src="{{ "/help6.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - reset"/>
+        </div>
+ <!--       
+        <div id="cycleXXX">
           <img src="{{ "/graph0.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph"/>
           <img src="{{ "/graph1.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click"/>
           <img src="{{ "/graph2.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
         </div>
-
+-->
   		</div>
   	</div>
 </div>
@@ -32,7 +46,8 @@ permalink: /help/
 $(document).ready(function(){
   $('#cycle').slick({
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    dots: true
   });
 });
 </script>
