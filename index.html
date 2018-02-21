@@ -4,10 +4,6 @@ layout: default
 
 <div class="container">
   <div class="row helpbutton">
-    <!-- Button trigger modal 
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
-      Help and Background
-    </button> -->
   </div>
 </div>
 
@@ -45,41 +41,6 @@ layout: default
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="myModalLabel">About the data</h3>
-      </div>
-      <div class="modal-body">
-
-
-        <p>The aim of the work was to map the current evidence base on contemporary slavery, including human trafficking, especially as it has an impact on the United Kingdom.</p>
-
-        <p>Explain scope of research (timeframe; type of research)... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet pellentesque sem, vel blandit ipsum euismod id. Cras fermentum massa in erat venenatis posuere. Morbi porttitor eros a euismod sollicitudin. </p>
-
-        <p><b>Filter the data by clicking on the charts</b></p>
-        <p>For example clicking "Forced Labour" will filter both the charts and the datatable to only show outputs related to Forced Labour. You can filter further or reset to return to viewing all the outputs.</p>     
-
-        <div id="cycle">
-          <img src="{{ "/help1.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph"/>
-          <img src="{{ "/help2.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click to filter"/>
-          <img src="{{ "/help3.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
-          <img src="{{ "/help4.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - click to filter"/>
-          <img src="{{ "/help5.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - result"/>
-          <img src="{{ "/help6.png" | prepend: site.baseurl }}" class="img-responsive" alt="example graph - reset"/>
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">View the data</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 <!--NB D3 ver3, not ver4; crossfilter load before dc.js  -->
@@ -91,18 +52,3 @@ layout: default
 <script type="text/javascript" src="{{ "/vendor/bootstrap.3.3.7.min.js" | prepend: site.baseurl }}"></script>     
 
 <script type="text/javascript" src="{{ "/iascresearch.js" | prepend: site.baseurl }}"></script>     
-
-<!-- slick image slider http://kenwheeler.github.io/slick/ -->
-<script type="text/javascript" src="{{ "/vendor/slick.min.js" | prepend: site.baseurl }}"></script> 
-
-<script>
-$('#myModal').modal('show');
-
-$(document).ready(function(){
-  $('#cycle').slick({
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: true
-  });
-});
-</script>
