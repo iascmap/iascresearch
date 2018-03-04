@@ -60,9 +60,11 @@ table>tbody+tbody { border-top: 0px !important; }
 .pagination input {float: right; margin-left: 1em}
 
 
+/* truncate urls NB block so runcate; online-block had alignment issues */
+.table a 		{width: 100px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 
-/* Tablets / 'Small' -- 1 col: small map*/
+/* Tablets / 'Small' -- 1 col: small map */
 @media (min-width: 768px) {
 	.header 		{padding-left:130px; }
 	.header img 	{max-height: 100px;} /* was 125 */
@@ -70,19 +72,27 @@ table>tbody+tbody { border-top: 0px !important; }
 	.header h1 		{padding-top: 0; font-size: 30px;}
 	#selectbar select {width: auto; margin-left: 0; margin-right: 2em}
 	h2 				{font-size: 30px;}
-
 	/* MAP */
 	.svg-container 	{width: 30%; margin-left: 35%; padding-bottom: 49.5%}
+	/* truncate urls */
+	.table a 		{width: 200px; }
 }
 
-/* Desktop / "Medium' -- 2 col: map fill col width*/
+/* Desktop / "Medium' -- 2 col: map fill col width */
 @media (min-width: 992px) {
 	.topbar			{min-height: 40px;}
 	.header img 	{max-height: 125px;} 
 	.header h1 		{font-size: 36px;}
 	#selectbar 		{padding-left: 130px}
-
 	th 				{white-space: nowrap;}
 	/* MAP */
 	.svg-container 	{width: 100%; margin-left: 0; padding-bottom: 165%}
+	/* truncate urls */
+	.table a 		{width: 400px; }
+}
+
+/* Large desktop / "Large' */
+@media (min-width: 1200px) {
+	/* truncate urls */
+	.table a 		{width: 600px; }
 }
