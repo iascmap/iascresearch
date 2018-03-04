@@ -61,7 +61,7 @@ table>tbody+tbody { border-top: 0px !important; }
 
 
 /* truncate urls NB block so truncate; online-block had alignment issues */
-.table a 		{width: 90%; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.table a 		{width: 300px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tags 			{font-style: italic; }
 /* hide all columns but first */
 .data-table td {display: none;}
