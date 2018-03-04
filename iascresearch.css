@@ -60,9 +60,14 @@ table>tbody+tbody { border-top: 0px !important; }
 .pagination input {float: right; margin-left: 1em}
 
 
-/* truncate urls NB block so runcate; online-block had alignment issues */
-.table a 		{width: 100px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
+/* truncate urls NB block so truncate; online-block had alignment issues */
+.table a 		{width: 90%; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tags 			{font-style: italic; }
+/* hide all columns but first */
+.data-table td {display: none;}
+.data-table th {display: none;}
+.data-table td:first-child {display: table-cell;} 
+.data-table th:first-child {display: table-cell;}
 
 /* Tablets / 'Small' -- 1 col: small map */
 @media (min-width: 768px) {
@@ -76,6 +81,9 @@ table>tbody+tbody { border-top: 0px !important; }
 	.svg-container 	{width: 30%; margin-left: 35%; padding-bottom: 49.5%}
 	/* truncate urls */
 	.table a 		{width: 200px; }
+	/* show all columns */
+	.data-table td {display: table-cell;} 
+	.data-table th {display: table-cell;} 
 }
 
 /* Desktop / "Medium' -- 2 col: map fill col width */

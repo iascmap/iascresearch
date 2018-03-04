@@ -32,6 +32,14 @@ d3.csv('data.csv', function (data) {
 				// console.log (d.id + ': ' + d.URL);
 				d.output = d.output + ' <a href="' + d.URL + '">' + d.URL + '</a>';
 			}
+
+			// new (hidden except on XS) Type	/ Intervention / Geographical / Sector
+			d.output = d.output + '<div class="tags visible-xs-block">' + d.type + ' / ' + d.intervention + ' / ' + d.geographical;
+			if (d.sector) {
+				d.output = d.output + ' / ' + d.sector;
+			}
+			d.output = d.output + '</div>'
+
 	});
 
 
